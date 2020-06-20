@@ -1,7 +1,7 @@
 ﻿Feature: SearchBookFilter
 	Check if List of searched book is shown when book is searched using filter
 
-
+	@Test2
  Scenario: Search Book using filter
 	Given I have navigated to Amazon Home Page
 	And  I see application opened

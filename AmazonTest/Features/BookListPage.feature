@@ -1,7 +1,7 @@
 ﻿Feature: BookListPage
 	Check If First Book from ,list Detail page is open when I clicked on it 
 
-
+@Test1
 Scenario: Click on first Searched Book
 	Given I have navigated to Amazon Home Page
 	And  I see application opened

@@ -75,10 +75,13 @@ namespace AmazonTest.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Search Book using filter")]
+        [NUnit.Framework.CategoryAttribute("Test2")]
         public virtual void SearchBookUsingFilter()
         {
-            string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search Book using filter", null, ((string[])(null)));
+            string[] tagsOfScenario = new string[] {
+                    "Test2"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search Book using filter", null, new string[] {
+                        "Test2"});
 #line 5
  this.ScenarioInitialize(scenarioInfo);
 #line hidden

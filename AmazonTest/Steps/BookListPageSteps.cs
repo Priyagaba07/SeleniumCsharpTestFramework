@@ -10,7 +10,7 @@ namespace AmazonTest.Steps
     class BookListPageSteps :BaseStep
     {
         public static string actualTitle;
-        public readonly DriverContext _driverConfig;
+        public new readonly DriverContext _driverConfig;
 
         public BookListPageSteps(DriverContext driverConfig) : base(driverConfig)
         {

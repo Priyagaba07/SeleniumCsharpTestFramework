@@ -75,10 +75,13 @@ namespace AmazonTest.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Click on first Searched Book")]
+        [NUnit.Framework.CategoryAttribute("Test1")]
         public virtual void ClickOnFirstSearchedBook()
         {
-            string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click on first Searched Book", null, ((string[])(null)));
+            string[] tagsOfScenario = new string[] {
+                    "Test1"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click on first Searched Book", null, new string[] {
+                        "Test1"});
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden

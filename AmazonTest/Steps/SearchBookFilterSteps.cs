@@ -9,7 +9,7 @@ namespace AmazonTest.Steps
     public class SearchBookFilterSteps :BaseStep
 
     {
-        public readonly DriverContext _driverConfig;
+        public new readonly DriverContext _driverConfig;
         public SearchBookFilterSteps(DriverContext driverConfig) : base(driverConfig)
         {
             _driverConfig = driverConfig;
