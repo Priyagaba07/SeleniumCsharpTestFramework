@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AmazonTestFramework": {
+      "commandName": "Project",
+      "workingDirectory": "D:\\SeleniumCsharp\\AmazonTestFramework"
+    }
+  }
+}
