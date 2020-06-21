@@ -6,6 +6,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="ExtentReports" Version="4.1.0-beta1" />
+		<PackageReference Include="Microsoft.Build" Version="16.6.0" />
 		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="2.9.0" />
 		<PackageReference Include="Microsoft.OData.Edm" Version="7.6.4" />
 		<PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="160.2004021.0" />
