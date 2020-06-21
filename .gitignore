@@ -339,3 +339,5 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 AmazonTest/ExtenReport/
+**/Screenshots/*.png
+*.png
