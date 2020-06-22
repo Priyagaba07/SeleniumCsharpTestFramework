@@ -47,7 +47,7 @@ namespace AmazonTest.Pages
         public void MatchTitleOfDetailBook(string actualBookTitle)
 
         {
-            actualBookTitle = actualBookTitle + "dss";
+            //actualBookTitle = actualBookTitle + "dss";
             _driverConfig.Driver.SwitchTo().Window(_driverConfig.Driver.WindowHandles[1]);
             string bookTitle = WebElementExtensions.GetElementText(TextFirstBookTitle);
           /*  if (actualBookTitle.Equals(bookTitle))
