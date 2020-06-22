@@ -3,6 +3,8 @@ using AmazonTestFramework.Extensions;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
+using System;
+using System.IO;
 using TechTalk.SpecFlow;
 
 namespace AmazonTest
@@ -29,9 +31,13 @@ namespace AmazonTest
         [BeforeTestRun]
         public static void TestStart()
         {
-         
-            var htmlReporter = new ExtentHtmlReporter(@"D:\SeleniumCsharp\AmazonTestFramework\AmazonTest\ExtenReport\ExtentReport.html");
-            htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
+
+            var curDir = AppDomain.CurrentDomain.BaseDirectory.ToString();
+            curDir = Path.GetFullPath(curDir + "../../..");
+            string strFileName = curDir + "/AmazonTest/ExtenReport/ExtentReport.html";
+            Console.WriteLine(strFileName);
+            var htmlReporter = new ExtentHtmlReporter(strFileName);
+           // htmlReporter.LoadConfig.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             extent = new ExtentReports();
             extent.AttachReporter(htmlReporter);
            
@@ -65,8 +71,13 @@ namespace AmazonTest
             if (_scenarioContext.TestError == null)
             {
                 if (stepType == "Given")
-                    scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text).AddScreenCaptureFromPath(WebElementExtensions.CapturePassScreenshot(_driverConfig.Driver ,stepName));
-               
+                {
+                    string path = WebElementExtensions.CapturePassScreenshot(_driverConfig.Driver, stepName);
+                    scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text).AddScreenCaptureFromPath(WebElementExtensions.CapturePassScreenshot(_driverConfig.Driver, stepName));
+                    scenario.AddScreenCaptureFromPath(path);
+                    Console.WriteLine(scenario);
+                }
+
                 else if (stepType == "When")
                     scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text);
                 else if (stepType == "Then")

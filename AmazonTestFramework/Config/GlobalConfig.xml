@@ -4,8 +4,8 @@
 		<AUT>https://www.amazon.in/</AUT>
 		<!-- Possible flag Chrome,Firefox, IE-->
 		<Browser>Chrome</Browser>
-		<ScreenshotPassPath>/AmazonTest/Screenshots/Pass/</ScreenshotPassPath>
-		<ScreenshotFailPath>/AmazonTest/Screenshots/Fail/</ScreenshotFailPath>
+		<ScreenshotPassPath>\AmazonTest\Screenshots\Pass\</ScreenshotPassPath>
+		<ScreenshotFailPath>\AmazonTest\Screenshots\Fail\</ScreenshotFailPath>
 		<!-- Possible flag Smoke, Regression, Unit  -->
 		<TestType>SmokeTest</TestType>
 		<!-- Possible Flag Y, N -->
